@@ -56,7 +56,7 @@ export const translations: Translations = {
         upload: "Click to upload inspiration images"
       },
       submit: "Submit Request",
-      success: "Thank you for your order! We will contact you soon.",
+      success: "Thank you for your request! We will contact you soon.",
       error: "There was an error sending your order. Please try again."
     },
     footer: {
@@ -116,7 +116,7 @@ export const translations: Translations = {
         upload: "Cliquez pour télécharger des images d'inspiration"
       },
       submit: "Envoyer la Demande",
-      success: "Merci pour votre commande ! Nous vous contacterons bientôt.",
+      success: "Merci pour votre demande ! Nous vous contacterons bientôt.",
       error: "Une erreur est survenue lors de l'envoi de votre commande. Veuillez réessayer."
     },
     footer: {

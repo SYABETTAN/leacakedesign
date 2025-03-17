@@ -175,9 +175,7 @@ function App() {
     <div className="min-h-screen bg-gradient-to-b from-pink-50 to-white">
       {showNotification && (
         <Notification
-          message={language === 'en' 
-            ? 'Thank you for your order! We will contact you soon.' 
-            : 'Merci pour votre commande ! Nous vous contacterons bientôt.'}
+          message={t.form.success}
           onClose={() => setShowNotification(false)}
         />
       )}
