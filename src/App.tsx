@@ -31,7 +31,9 @@ function App() {
   });
 
   const whatsappNumber = "+972548816831";
-  const whatsappMessage = encodeURIComponent("Bonjour, je souhaiterais commander un gâteau !");
+  const whatsappMessage = language === 'en' 
+    ? encodeURIComponent("Hello, I would like to order a cake!")
+    : encodeURIComponent("Bonjour, je souhaiterais commander un gâteau !");
 
   useEffect(() => {
     if (!formData.delivery) {
