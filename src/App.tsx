@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Cake, Mail, Instagram, Star, Clock, Upload } from 'lucide-react';
+import { Cake, Mail, Instagram, Star, Clock, Upload, MessageCircle } from 'lucide-react';
 import { translations } from './translations';
 import { BentoIcon } from './components/BentoIcon';
 import { ClassicCakeIcon } from './components/ClassicCakeIcon';
@@ -29,6 +29,9 @@ function App() {
     deliveryAddress: '',
     pickup: true
   });
+
+  const whatsappNumber = "+972548816831";
+  const whatsappMessage = encodeURIComponent("Bonjour, je souhaiterais commander un gâteau !");
 
   useEffect(() => {
     if (!formData.delivery) {
@@ -173,6 +176,18 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-pink-50 to-white">
+      {/* WhatsApp Button */}
+      <a
+        href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-4 right-4 z-50 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors flex items-center space-x-2"
+        aria-label="Contact on WhatsApp"
+      >
+        <MessageCircle className="w-6 h-6" />
+        <span className="hidden md:inline">WhatsApp</span>
+      </a>
+
       {showNotification && (
         <Notification
           message={language === 'en' 
